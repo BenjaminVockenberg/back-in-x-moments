@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div id="app">    
+    <info-section />
+    <Countdown />
+    <br><br>
+    <BioSection />
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Countdown from './components/Countdown.vue';
+import BioSection from './components/BioSection.vue';
+import InfoSection from './components/InfoSection.vue';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+    name: 'app',
+    components: { Countdown, BioSection, InfoSection }
 }
 </script>
 
 <style lang="scss">
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Exo:100');
+@import url('https://fonts.googleapis.com/css?family=Oswald:600');
+
+body {
+    background: url('assets/starry_sky_galaxy_universe_sky_night_118591_1920x1080.jpg') 50% 0 no-repeat fixed;
+    background-size: cover;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: sans-serif;
+    margin-top: 60px;
+
+    h1, h2, h3, h4, h5, h6, p {
+        color: whitesmoke;
+    }
 }
 </style>
