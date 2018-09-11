@@ -3,7 +3,7 @@
     <div class="row align-items-center">
         
         <h1>I'll be back in ...</h1>
-        <br><br><br><br>
+        <br><br>
 
         <div class="col-sm-12">
             <div class="row">
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                </div>            
+                </div>
             </div>
         </div>
     </div>
@@ -76,12 +76,14 @@
 <script>
 export default {
     name: 'Countdown',
-    // Ready function
+
+    // former ready function
     mounted() {
         window.setInterval(() => {
             this.now = Math.trunc((new Date()).getTime() / 1000);            
         },1000);
     },
+
     // Data object
     data() {
         return {
@@ -90,8 +92,10 @@ export default {
             // Date when I will be back again
             date : Math.trunc((new Date( 'January 21, 2019 09:00:00')) / 1000)            
         }
-    },   
+    },  
+
     computed: {
+        
         /**
          * @name seconds
          * @returns {Number}
@@ -100,6 +104,7 @@ export default {
         seconds() {
             return (this.date - this.now) % 60;
         },
+
         /**
          * @name minutes
          * @returns {Number}
@@ -108,6 +113,7 @@ export default {
         minutes() {
             return Math.trunc((this.date - this.now) / 60) % 60;
         },
+
         /**
          * @name hours
          * @returns {Number}
@@ -116,6 +122,7 @@ export default {
         hours() {
             return Math.trunc((this.date - this.now) / 60 / 60) % 24;
         },
+
         /**
          * @name days
          * @returns {Number}
@@ -126,6 +133,7 @@ export default {
         }
     },
     filters : {
+        
         //! no need for a mixin because filter only used on computed properties 
         /**
          * @name two_digits
@@ -135,7 +143,7 @@ export default {
          */
         two_digits : function (value) {
             if (value.toString().length <= 1) {
-                return '0'+value.toString();
+                return '0' + value.toString();
             }
             return value.toString();
         }
@@ -147,28 +155,28 @@ export default {
 .digit {
     p {
         font-family: 'Exo', sans-serif;
-        font-size: 800%;//120px;
+        font-size: 750%;
     }
 }
 
-.unit {    
-    p {        
+.unit {
+    p {
         font-family: 'Oswald', sans-serif;
         font-size: 40px;
-        color: rgb(40, 153, 91) !important;
+        color: rgb( 40, 153, 91 ) !important;
     }
 }
 
 @media (min-width: 576px) {
     .digit {
-        p {            
-            font-size: 400%;//120px;
+        p {
+            font-size: 400%;
         }
     }
 
-    .unit {    
-        p {        
-            font-size: 30px;        
+    .unit {
+        p {
+            font-size: 30px;
         }
     }    
 }
@@ -176,14 +184,14 @@ export default {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
     .digit {
-        p {            
-            font-size: 600%;//120px;
+        p {
+            font-size: 600%;
         }
     }
 
-    .unit {    
+    .unit {
         p {
-            font-size: 30px;        
+            font-size: 30px;
         }
     }
 }
@@ -191,12 +199,12 @@ export default {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     .digit {
-        p {            
-            font-size: 800%;//120px;
+        p {
+            font-size: 750%;
         }
     }
 
-    .unit {    
+    .unit {
         p {
             font-size: 40px;
         }
@@ -206,12 +214,12 @@ export default {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     .digit {
-        p {            
-            font-size: 800%;//120px;
+        p {
+            font-size: 750%;
         }
     }
 
-    .unit {    
+    .unit {
         p {
             font-size: 40px;
         }

@@ -5,22 +5,24 @@
         <div class="col-sm-1">
             <i class="fas fa-info-circle" @click="show = !show"></i>
         </div>
+        
         <transition name="fade">
             <div v-show="show" class="col-md-12 infoc" mode="out-in" @click="show = !show">
                 <div class="row justify-content-center">
                     <div class="col-sm-4">
                         <h2>Hi I'm Ben</h2>
-                        <h3>I'm frontend developer @Reservix in Frankfurt, Germany</h3>
+                        <h3>Frontend developer @Reservix in Frankfurt, Germany</h3>
                         <p>This site is not using any cookies, tracking or other malware. Enjoy!</p>
+                        <p>This Site was made with Vue/Cli, Webpack and Love</p>
+                        <p>Was using VSCode as my favorite IDE... try the <strong>ActionMode</strong> plugin if you want some action while coding :)</p>
                     </div>
                     <div class="col-sm-4">
                         <h2>Contact me</h2>
                         <h3>On Twitter or by email</h3>
-                        <p><strong>Twitter:</strong>@technokrat</p>
-                        <p><strong>Mail:</strong>benjamin.vockenberg@gmail.com</p>
+                        <p><strong>Twitter:</strong> @technokrat</p>
+                        <p><strong>Mail:</strong> benjamin.vockenberg@gmail.com</p>
                     </div>
                 </div>
-                
             </div>
         </transition>
 
@@ -41,24 +43,24 @@ export default {
 
 <style scoped lang="scss">
     i {
-        font-size: 30px;
-        color: rgba(220,220,220,0.5);
+        font-size: 25px;
+        color: rgba( 220, 220, 220, 0.5 );
 
         &:hover {
-            color: rgba(220,220,220,1);
+            color: rgba( 220,  220,220, 1 );
         }
     }
 
     p {
         color: whitesmoke !important;
-    }    
+    }
 
     .infoc {
-        background-color: rgba(0,0,0, 0.9);
-        padding: 2%;
+        background-color: rgba( 0, 0, 0, 0.9 );
+        padding: 5%;
         height: 100%;
-        Width: 100%;
-        position: absolute;
+        width: 100%;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 999;
