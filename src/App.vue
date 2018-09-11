@@ -1,6 +1,6 @@
 <template>
-<div id="app">    
-    <info-section />
+<div id="app">
+    <InfoSection />
     <Countdown />
     <br><br>
     <BioSection />
@@ -32,7 +32,7 @@ body {
 
 #app {
     font-family: sans-serif;
-    margin-top: 60px;
+    margin-top: 40px;
 
     h1, h2, h3, h4, h5, h6, p {
         color: whitesmoke;

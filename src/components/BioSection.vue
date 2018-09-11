@@ -6,9 +6,9 @@
         </div>
         <div class="col-sm-9">
             <h2>I'll be back</h2>
-            <p>I'll spend some time with my daughter. Thank you <strong>Reservix GmbH</strong> for giving me the chance to take a parental leave of 4 month. </p>
-            <p><strong>Special Thanks to:</strong> Helge Hollander, Katrin Stahlberg, Johannes Tolle, Katharina Junker, Benjamin Berg &amp; Carsten Müller</p>
-            <p><strong>Thanks to the Team:</strong> Julia, Lea, Yook, Christian, Rafi, Ewgenij, Alexey, Andres, Domenic, Matthias &amp; Wiktor and to all the other colleagues I missed!</p>
+            <p>I'll spend some time with my daughter. Thank you <strong>Reservix GmbH</strong> for giving me the chance to take a parental leave of 4 month.</p>
+            <p><strong>Special thanks to:</strong> Helge Hollander, Katrin Stahlberg, Johannes Tolle, Katharina Junker, Benjamin Berg &amp; Carsten Müller</p>
+            <p><strong>Thanks to the team:</strong> Julia, Lea, Yook, Christian, Rafi, Ewgenij, Alexey, Andres, Dome, Mad Matthias &amp; Wiktor and to all the other colleagues I missed!</p>
             <p>Best whishes Ben, Anne-Katrin &amp; Hannah-Marie</p>
         </div>
     </div>        
