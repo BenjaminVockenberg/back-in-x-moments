@@ -139,7 +139,7 @@ export default {
          * @name two_digits
          * @param value {Number}
          * @returns value {String}
-         * @desc timer digits lowers than one will get an 0 as prefix
+         * @desc putting a leading zero if number has digits < 2
          */
         two_digits : function (value) {
             if (value.toString().length <= 1) {
