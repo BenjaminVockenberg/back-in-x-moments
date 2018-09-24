@@ -21,4 +21,4 @@ npm run lint
 
 ## Description
 ```
-This a countdown till my parental leave of 4 month ends.
+This a countdown till my parental leave of 4 month ends. Its build for iPhone home screen app
