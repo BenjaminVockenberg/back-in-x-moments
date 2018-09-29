@@ -4,20 +4,33 @@
         <div class="col-sm-3">
             <img src="../assets/ben.jpg" alt="benjamin vockenberg">
         </div>
-        <div class="col-sm-9">
-            <h2>I'll be back...</h2>
-            <p>...after spending some time with my daughter. Thank you <strong>Reservix GmbH</strong> for giving me the chance to take a parental leave of 4 month.</p>
-            <p><strong>Special thx to:</strong> Helge Hollander, Katrin Stahlberg, Johannes Tolle, Katharina Junker, Benjamin Berg &amp; Carsten Müller</p>
-            <p><strong>Thx to the team:</strong> Julia, Lea, Yook, Christian, Rafi, Ewgenij, Alexey, Andres, Dome, Matthias, Wiktor &amp; to all the other colleagues I missed!</p>
-            <p>Best whishes Ben, Anne-Katrin &amp; Hannah-Marie</p>
+        <div class="col-sm-9">            
+            <h2>{{ entry.data.title }}</h2>
+            <div class="vhtml" v-html="entry.data.content"></div>
         </div>
     </div>        
 </div>
 </template>
 
 <script>
+
+//Axios as firebase api consumer
+import axios from 'axios';
+
 export default {
-    name: 'BioSection'
+    name: 'BioSection',
+    data() {
+        return {
+            // Data struct from firebase
+            entry : {
+                title : null,
+                content: null
+            }
+        }
+    },
+    mounted() {
+        axios.get('https://littleblog-c8a97.firebaseio.com/entry.json').then(response => (this.entry = response));
+    }
 }
 </script>
 
@@ -26,8 +39,8 @@ img {
     width: 100%;
 }
 
-p {    
-    font-size: 22px;
+p, .vhtml {    
+    font-size: 22px !important;
 }
 
 .biog {
