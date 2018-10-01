@@ -6,7 +6,10 @@
         </div>
         <div class="col-sm-9">            
             <h2>{{ entry.data.title }}</h2>
-            <div class="vhtml" v-html="entry.data.content"></div>
+            <div class="vhtml" v-html="entry.data.content">
+                <h2>Sorry!</h2>
+                <p>We habe database problems. Please retry later!</p>
+            </div>
         </div>
     </div>        
 </div>
@@ -29,7 +32,9 @@ export default {
         }
     },
     mounted() {
-        axios.get('https://littleblog-c8a97.firebaseio.com/entry.json').then(response => (this.entry = response));
+        // We are getting data after Site has been loaded
+        axios.get('https://littleblog-c8a97.firebaseio.com/entry.json')
+                .then(response => (this.entry = response));
     }
 }
 </script>

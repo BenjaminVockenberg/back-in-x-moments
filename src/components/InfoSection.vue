@@ -13,7 +13,7 @@
                         <h2>Hi I'm Ben</h2>
                         <h3>Frontend developer @Reservix in Frankfurt, Germany</h3>
                         <p>This site is not using any cookies, tracking or other malware. Enjoy!</p>
-                        <p>This Site was made with Vue/Cli, Webpack and Love</p>
+                        <p>This Site was made with Vue/Cli, Webpack and Love... and a bit of Firebase!</p>
                         <p>Was using VSCode as my favorite IDE... try the <strong>ActionMode</strong> plugin if you want some action while coding :)</p>
                     </div>
                     <div class="col-sm-4">
