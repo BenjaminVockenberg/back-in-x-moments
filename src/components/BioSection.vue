@@ -5,6 +5,7 @@
             <div class="col-sm-3">
                 <img src="../assets/ben.jpg" alt="benjamin vockenberg">
             </div>
+            
             <div class="col-sm-9">            
                 <h2>I'll be back...</h2>
                 <p>...after spending some time with my daughter. Thank you <strong>Reservix GmbH</strong> for giving me the chance to take a parental leave of 4 month.</p>
