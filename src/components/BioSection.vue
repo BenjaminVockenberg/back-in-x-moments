@@ -5,6 +5,7 @@
             <div class="col-sm-3">
                 <img src="../assets/ben.jpg" alt="benjamin vockenberg">
             </div>
+            
             <div class="col-sm-9">            
                 <h2>I'll be back...</h2>
                 <p>...after spending some time with my daughter. Thank you <strong>Reservix GmbH</strong> for giving me the chance to take a parental leave of 4 month.</p>
@@ -40,7 +41,8 @@ export default {
             // Data struct from firebase
             entry : {
                 title : null,
-                content: null
+                content: null,
+                date: null
             }
         }
     },
@@ -61,18 +63,10 @@ p, .vhtml {
     font-size: 22px !important;
 }
 
-.biog {
+.biog, .achievement {
     background-color: rgba(0,0,0, 0.5);
     padding: 2%;
     margin: 0 0 20px 0;
 }
-
-.achievement {
-    background-color: rgba(0,0,0, 0.5);
-    padding: 2%;    
-    margin: 0 0 20px 0;
-    
-}
-
 
 </style>
