@@ -40,7 +40,8 @@ export default {
             // Data struct from firebase
             entry : {
                 title : null,
-                content: null
+                content: null,
+                date: null
             }
         }
     },
@@ -61,18 +62,10 @@ p, .vhtml {
     font-size: 22px !important;
 }
 
-.biog {
+.biog, .achievement {
     background-color: rgba(0,0,0, 0.5);
     padding: 2%;
     margin: 0 0 20px 0;
 }
-
-.achievement {
-    background-color: rgba(0,0,0, 0.5);
-    padding: 2%;    
-    margin: 0 0 20px 0;
-    
-}
-
 
 </style>
