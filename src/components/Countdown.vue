@@ -79,8 +79,9 @@ export default {
 
     // former ready function
     mounted() {
+        // updating the countdown every second
         window.setInterval(() => {
-            this.now = Math.trunc((new Date()).getTime() / 1000);            
+            this.now = Math.trunc((new Date()).getTime() / 1000);
         },1000);
     },
 
@@ -90,15 +91,16 @@ export default {
             // Current Time without decimal places
             now: Math.trunc((new Date()).getTime() / 1000),
             // Date when I will be back again
-            date : Math.trunc((new Date( 'January 21, 2019 09:00:00')) / 1000)            
+            date : Math.trunc((new Date( 'January 21, 2019 09:00:00')) / 1000)
         }
     },
 
+    // methods section
     methods: {
         /**
          * @name countZero
          * @returns {Bool}
-         * @desc will set Countdown to zero if Date exspired 
+         * @desc will set Countdown to zero if Date exspired
          */
         countsZero() {
             if (this.date - this.now <= 0) {
@@ -109,19 +111,18 @@ export default {
         }
     },
 
-    computed: {        
+    computed: {
 
         /**
          * @name seconds
          * @returns {Number}
          * @desc computing the seconds enddate - now % 60
          */
-        seconds() {            
+        seconds() {
             if (!this.countsZero()) {
                 return (this.date - this.now) % 60;
             }
             return 0;
-            
         },
 
         /**
@@ -160,8 +161,8 @@ export default {
             return 0;
         }
     },
+
     filters : {
-        
         //! no need for a mixin because filter only used on computed properties 
         /**
          * @name two_digits
@@ -206,7 +207,7 @@ export default {
         p {
             font-size: 30px;
         }
-    }    
+    }
 }
 
 // Medium devices (tablets, 768px and up)
