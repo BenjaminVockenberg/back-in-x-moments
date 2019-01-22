@@ -92,17 +92,36 @@ export default {
             // Date when I will be back again
             date : Math.trunc((new Date( 'January 21, 2019 09:00:00')) / 1000)            
         }
-    },  
+    },
 
-    computed: {
-        
+    methods: {
+        /**
+         * @name countZero
+         * @returns {Bool}
+         * @desc will set Countdown to zero if Date exspired 
+         */
+        countsZero() {
+            if (this.date - this.now <= 0) {
+                return true;
+            }
+
+            return false;
+        }
+    },
+
+    computed: {        
+
         /**
          * @name seconds
          * @returns {Number}
          * @desc computing the seconds enddate - now % 60
          */
-        seconds() {
-            return (this.date - this.now) % 60;
+        seconds() {            
+            if (!this.countsZero()) {
+                return (this.date - this.now) % 60;
+            }
+            return 0;
+            
         },
 
         /**
@@ -111,7 +130,10 @@ export default {
          * @desc computing the minutes date - now / 60 % 60
          */
         minutes() {
-            return Math.trunc((this.date - this.now) / 60) % 60;
+            if (!this.countsZero()) {
+                return Math.trunc((this.date - this.now) / 60) % 60;
+            }
+            return 0;
         },
 
         /**
@@ -120,7 +142,10 @@ export default {
          * @desc computing the hours date - now / minutes / seconds % max hours / day
          */
         hours() {
-            return Math.trunc((this.date - this.now) / 60 / 60) % 24;
+            if (!this.countsZero()) {
+                return Math.trunc((this.date - this.now) / 60 / 60) % 24;
+            }
+            return 0;
         },
 
         /**
@@ -129,7 +154,10 @@ export default {
          * @desc computing the days date - now / minutes / seconds / days!
          */
         days() {
-            return Math.trunc((this.date - this.now) / 60 / 60 / 24);
+            if (!this.countsZero()) {
+                return Math.trunc((this.date - this.now) / 60 / 60 / 24);
+            }
+            return 0;
         }
     },
     filters : {
