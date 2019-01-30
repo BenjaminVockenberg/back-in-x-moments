@@ -1,5 +1,5 @@
 # back-in-x-minutes
-by Benjamin Vockenberg
+by Benjamin Vockenberg in 2019
 
 ## Project setup
 ```
